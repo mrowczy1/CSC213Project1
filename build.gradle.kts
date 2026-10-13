@@ -1,13 +1,11 @@
 plugins {
-    id("java") // Gradle can work with other languages, not just Java! So want to specify we have a Java project.
+    java // Gradle can work with other languages, not just Java! So want to specify we have a Java project.
     // To find which languages are supported: https://docs.gradle.org/current/userguide/userguide.html
-    id("application") // When using Gradle, it is better to run programs through Gradle, rather than Intellij.
+    application // When using Gradle, it is better to run programs through Gradle, rather than Intellij.
 }
 
-java { // Want to explicitly state which Java version we are using in this project for the programmer and Gradle!
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
+// Want to explicitly state which Java version we are using in this project for the programmer and Gradle!
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 application.mainClass = "edu.canisius.csc213.project1.UniqueHands"
 
@@ -22,10 +20,10 @@ dependencies {
     // from Maven Central.
 
     // This dependency is for the testing code to run. /////////////////////////////////////////////////////////////
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.2") // Declare testing framework launcher.
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.3") // Declare testing framework launcher.
 
     // This dependency is required to compile and run the testing code. ////////////////////////////////////////////
-    testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.0.3")
 }
 
 tasks.test {
