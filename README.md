@@ -42,7 +42,7 @@ It's usually a good idea to stick with this default structure. Otherwise, you ha
 
 ## Part 1. Defining the Card and the Deck Classes
 
-Implement a `Card` class that represents a standard playing card. Each card has:
+Implement a `Card` `record` that represents a standard playing card. Each card has:
 
 - A **suit** (♠ **Spades**, ♥ **Hearts**, ♦ **Diamonds**, ♣ **Clubs**)
 - A **rank** (**2–10, Jack, Queen, King, Ace**)
@@ -79,11 +79,12 @@ public enum Rank {TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QU
 - You can determine what each of them test by looking at their corresponding Javadocs and testing code.
 - It is not guaranteed that your `Card` `record` functions completely correctly if it passes all the tests, but it is a
   very good check!
+- You will have to create some method stubs to ensure that the codebase can compile to run these tests.
 ---
 
 ### 🔧 **Step 3: Implement the `Deck` Class**
 
-The `class Deck` in `Deck.java` represents a **custom-sized deck of playing cards**, that supports shuffling and
+The `Deck` `class` in `Deck.java` represents a **custom-sized deck of playing cards**, that supports shuffling and
 drawing.
 
 #### **Deck Rules:**

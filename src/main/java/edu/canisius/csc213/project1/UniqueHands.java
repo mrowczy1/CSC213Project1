@@ -5,13 +5,13 @@ package edu.canisius.csc213.project1;
  */
 public class UniqueHands {
 	
-	static void main(String[] args) {
+	static void main() {
 		int[] deckSizes = {24, 28}; // Deck sizes to test
 		int[] handSizes = {6, 7}; // Hand sizes to test
 		int trials = 5; // Number of trials per deck-hand combination
 		
-		System.out.println("🃏 Deck Simulation: How long to see every possible hand?");
-		System.out.println("-".repeat(100));
+		IO.println("🃏 Deck Simulation: How long to see every possible hand?");
+		IO.println("-".repeat(100));
 		
 		// TODO: Implement nested loops
 		// Outer loop: Iterates through deck sizes (24, 28)
